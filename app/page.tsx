@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 import Navbar from "../components/Nevbar";
 import HeroSection from "../components/HeroSection";
 import SkillsSection from "../components/SkillsSection";
