@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -8,10 +9,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        black: "#000000",
+        black: "#000001",
         lightBlue: "#00aaff",
         darkBlue: "#001f3f",
         gold: "#FFD700",
+      },
+      keyframes: {
+        fadeInSlideUp: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        fadeInSlideUp: "fadeInSlideUp 1s ease-out forwards",
       },
     },
   },
